@@ -1,8 +1,6 @@
 package mutalbie;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by mauricioaniche on 07/12/2017.
@@ -10,12 +8,12 @@ import java.util.Set;
 public class Context {
 
     private Set<String> immutableClasses;
-    private Set<String> problems;
+    private Collection<String> problems;
 
     public Context() {
 
         this.immutableClasses = new HashSet<>();
-        this.problems = new HashSet<>();
+        this.problems = new ArrayList<>();
     }
 
     public void addImmutableClass(String clazz) {
@@ -34,7 +32,7 @@ public class Context {
         problems.add("You suck: " + currentClazz + " " + currentMethod);
     }
 
-    public Set<String> getProblems () {
-        return Collections.unmodifiableSet(problems);
+    public Collection<String> getProblems () {
+        return Collections.unmodifiableCollection(problems);
     }
 }

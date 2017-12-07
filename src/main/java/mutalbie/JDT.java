@@ -56,7 +56,6 @@ public class JDT {
         }
 
 
-        System.out.println("hora de achar os erros");
         for(List<String> partition : partitions) {
             ASTParser parser = ASTParser.newParser(AST.JLS8);
 

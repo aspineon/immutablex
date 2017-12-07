@@ -38,10 +38,8 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
             if(binding == null)
                 continue;
 
-            if(context.isImmutable(binding.getQualifiedName())) {
-                String paramName = p.getName().toString();
-                variablesToMonitor.add(paramName);
-            }
+            String paramName = p.getName().toString();
+            variablesToMonitor.add(paramName);
         }
 
         return super.visit(node);
@@ -56,21 +54,21 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
     @Override
     public boolean visit(MethodInvocation node) {
 
+        String variableInvoked = node.getExpression().toString().split("\\.")[0];
+        ITypeBinding binding = node.getExpression().resolveTypeBinding();
+        if(binding == null)
+            return super.visit(node);
 
-        String variableInvoked = node.getExpression().toString();
+        String className = binding.getQualifiedName();
 
-        if(variablesToMonitor.contains(variableInvoked)) {
+        if(variablesToMonitor.contains(variableInvoked) && context.isImmutable(className)) {
             String invokedMethod = node.getName().toString();
 
             boolean problematic = invokedMethod.startsWith("set");
-            context.addProblem(currentClazz, currentMethod);
+            if(problematic)
+                context.addProblem(currentClazz, currentMethod);
         }
 
-
-
-
-
         return super.visit(node);
-
     }
 }

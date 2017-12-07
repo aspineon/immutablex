@@ -9,6 +9,7 @@ public class Class3 {
 
         c.setB("alberto");
         c.b();
+        c.setB("alberto");
 
     }
 
