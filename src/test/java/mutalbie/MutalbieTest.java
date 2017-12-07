@@ -24,4 +24,13 @@ public class MutalbieTest {
         System.out.println(context.getProblems());
 
     }
+
+    @Test
+    public void alura() {
+
+        Context context = new Context();
+        new JDT(context).calculate("/Users/mauricioaniche/workspace/gnarus/src");
+        System.out.println(context.getProblems());
+
+    }
 }

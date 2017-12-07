@@ -54,6 +54,10 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
     @Override
     public boolean visit(MethodInvocation node) {
 
+        if(node.getExpression() == null) {
+            System.out.println("TODO: implement static invocation " + currentClazz + "#" + node.toString());
+            return super.visit(node);
+        }
         String variableInvoked = node.getExpression().toString().split("\\.")[0];
         ITypeBinding binding = node.getExpression().resolveTypeBinding();
         if(binding == null)
