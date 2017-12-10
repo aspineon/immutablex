@@ -1,6 +1,6 @@
 package a;
 
-import mutalbie.ImmutableX;
+import immutablex.ImmutableX;
 
 @ImmutableX
 public class Class2 {

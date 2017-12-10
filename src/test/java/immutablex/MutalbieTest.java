@@ -1,4 +1,4 @@
-package mutalbie;
+package immutablex;
 
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class MutalbieTest {
     public void simpleTest() {
 
         Context context = new Context();
-        new JDT(context).calculate("/Users/mauricioaniche/workspace/mutalbie/fixtures/t1");
+        new JDTRunner(context).calculate("/Users/mauricioaniche/workspace/mutalbie/fixtures/t1");
         System.out.println(context.getProblems());
 
     }
@@ -20,7 +20,7 @@ public class MutalbieTest {
     public void methodChaining() {
 
         Context context = new Context();
-        new JDT(context).calculate("/Users/mauricioaniche/workspace/mutalbie/fixtures/t2");
+        new JDTRunner(context).calculate("/Users/mauricioaniche/workspace/mutalbie/fixtures/t2");
         System.out.println(context.getProblems());
 
     }
@@ -29,7 +29,7 @@ public class MutalbieTest {
     public void alura() {
 
         Context context = new Context();
-        new JDT(context).calculate("/Users/mauricioaniche/workspace/gnarus/src");
+        new JDTRunner(context).calculate("/Users/mauricioaniche/workspace/gnarus/src");
         System.out.println(context.getProblems());
 
     }

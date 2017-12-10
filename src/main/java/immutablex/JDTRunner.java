@@ -1,11 +1,10 @@
-package mutalbie;
+package immutablex;
 
 import com.google.common.collect.Lists;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ import java.util.Map;
 /**
  * Created by mauricioaniche on 07/12/2017.
  */
-public class JDT {
+public class JDTRunner {
 
     private static final int MAX_AT_ONCE;
 
@@ -29,7 +28,7 @@ public class JDT {
 
     private Context context;
 
-    public JDT(Context context) {
+    public JDTRunner (Context context) {
         this.context = context;
     }
 

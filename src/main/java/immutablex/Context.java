@@ -1,4 +1,4 @@
-package mutalbie;
+package immutablex;
 
 import java.util.*;
 
