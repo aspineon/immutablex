@@ -76,6 +76,9 @@ _Please, do remember that this was programmed in a 2-hour pair programming sessi
 just to experiment the idea (and for fun, obviously). We do not provide any warranties, but
 we would be very happy to get your feedback!_
 
+Nice related work if you are interested in forcing immutability in Java:
+_Coblenz, Michael, Whitney Nelson, Jonathan Aldrich, Brad Myers, and Joshua Sunshine. "Glacier: Transitive class immutability for Java." In Proceedings of the 39th International Conference on Software Engineering, pp. 496-506. IEEE Press, 2017._ [Paper here](https://pdfs.semanticscholar.org/f048/6790bbd394fe16d4d95c0cc0b6f59fc8a13c.pdf)
+
 ## Authors
 
 This project was created by:
