@@ -64,6 +64,15 @@ Please, do remember that this was programmed in a 2-hour pair programming sessio
 just to experiment the idea (and for fun, obviously). We do not provide any warranties, but
 we would be very happy to get your feedback!
 
+## Using the tool
+
+Download the 0.1 version here: https://github.com/mauricioaniche/immutablex/releases/tag/0.1
+
+To run:
+```
+java -jar immutablex-0.1-SNAPSHOT-jar-with-dependencies.jar <path to your source code folder>
+```
+
 ## Authors
 
 This project was created by:
