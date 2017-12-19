@@ -15,6 +15,7 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
     private Set<String> variablesToMonitor;
     private String currentClazz;
     private String currentMethod;
+    private CompilationUnit cu;
 
     public ImmutableUsageDetectorVisitor (Context context) {
         this.context = context;
@@ -24,6 +25,12 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
     public boolean visit(TypeDeclaration node) {
         this.currentClazz = node.getName().toString();
         return super.visit(node);
+    }
+
+    @Override
+    public boolean visit(CompilationUnit cu) {
+        this.cu = cu;
+        return super.visit(cu);
     }
 
     @Override
@@ -70,7 +77,7 @@ public class ImmutableUsageDetectorVisitor extends ASTVisitor {
 
             boolean problematic = invokedMethod.startsWith("set");
             if(problematic)
-                context.addProblem(currentClazz, currentMethod);
+                context.addProblem(currentClazz, currentMethod, node.toString(), cu.getLineNumber(node.getStartPosition())-1);
         }
 
         return super.visit(node);

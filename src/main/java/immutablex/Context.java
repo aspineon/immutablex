@@ -8,7 +8,7 @@ import java.util.*;
 public class Context {
 
     private Set<String> immutableClasses;
-    private Collection<String> problems;
+    private Collection<Problem> problems;
 
     public Context() {
 
@@ -28,11 +28,11 @@ public class Context {
         return immutableClasses.contains(qualifiedName);
     }
 
-    public void addProblem (String currentClazz, String currentMethod) {
-        problems.add("You suck: " + currentClazz + " " + currentMethod);
+    public void addProblem (String currentClazz, String currentMethod, String invokedMethod, int line) {
+        problems.add(new Problem(currentClazz, currentMethod, invokedMethod, line));
     }
 
-    public Collection<String> getProblems () {
+    public Collection<Problem> getProblems () {
         return Collections.unmodifiableCollection(problems);
     }
 }

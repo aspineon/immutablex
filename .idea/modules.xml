@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mutalbie.iml" filepath="$PROJECT_DIR$/mutalbie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/immutablex.iml" filepath="$PROJECT_DIR$/immutablex.iml" />
     </modules>
   </component>
 </project>
