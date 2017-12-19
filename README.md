@@ -39,7 +39,8 @@ class BusinessRule2 {
 }
 ```
 
-Yes, it hurts. 
+Yes, it hurts. It would be much better if the instantiated class could only
+have its state changed in the same scope it was declared.
 
 **ImmutableX** detects such violations. To use it, you have to:
 
