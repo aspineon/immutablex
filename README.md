@@ -44,7 +44,8 @@ Yes, it hurts.
 **ImmutableX** detects such violations. To use it, you have to:
 
 - Create 
-an annotation in your software with the name of `@ImmutableX`.
+an annotation in your software with the name of `@ImmutableX`. Yes, you create it, so that
+you don't have to depend on any new crazy jar.
 - Annotate which classes of your system you do not allow such violation to happen. 
 Just add `@ImmutableX` in the class declaration.
 - That's it. Just point our tool to your source directory and see the violations. 
