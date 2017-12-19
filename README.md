@@ -42,6 +42,8 @@ class BusinessRule2 {
 Yes, it hurts. It would be much better if the instantiated class could only
 have its state changed in the same scope it was declared.
 
+## Using the tool
+
 **ImmutableX** detects such violations. To use it, you have to:
 
 - Create 
@@ -60,18 +62,16 @@ Class1#method:9 -> invalid invocation: c.setName("mauricio")
 Class2#otherMethod:11 -> invalid invocation: c.setName("alberto")
 ```
 
-Please, do remember that this was programmed in a 2-hour pair programming session
-just to experiment the idea (and for fun, obviously). We do not provide any warranties, but
-we would be very happy to get your feedback!
-
-## Using the tool
-
 Download the 0.1 version here: https://github.com/mauricioaniche/immutablex/releases/tag/0.1
 
 To run:
 ```
 java -jar immutablex-0.1-SNAPSHOT-jar-with-dependencies.jar <path to your source code folder>
 ```
+
+_Please, do remember that this was programmed in a 2-hour pair programming session
+just to experiment the idea (and for fun, obviously). We do not provide any warranties, but
+we would be very happy to get your feedback!_
 
 ## Authors
 
