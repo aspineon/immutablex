@@ -64,8 +64,9 @@ we would be very happy to get your feedback!
 
 ## Authors
 
-This project was created by Maurício Aniche (@mauricioaniche) and
-Alberto Souza (@alberto_souza).
+This project was created by:
+- Maurício Aniche (@mauricioaniche)
+- Alberto Souza (@alberto_souza)
 
 ## License
 
