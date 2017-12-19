@@ -33,7 +33,7 @@ class BusinessRule1 {
 class BusinessRule2 {
     public void doSomething(Invoice inv) {
         // Oh no, we are changing the state here!!!
-        // Poor BusinessRule1, it will never know it happened.
+        // Poor BusinessRule1, it will never know a change happened.
         inv.changeState();
     }
 }
