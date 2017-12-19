@@ -53,6 +53,9 @@ you don't have to depend on any new crazy jar.
 Just add `@ImmutableX` in the class declaration.
 - That's it. Just point our tool to your source directory and see the violations. 
 
+The tool considers a violation, whenever:
+- A setter method is invoked outside of the scope in which the object was declared.
+
 The tool provides the class and method that makes bad usage of the immutable class as well as
 line number and invalid method invocation. 
 Example:
